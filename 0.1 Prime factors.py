@@ -1,12 +1,8 @@
-def get_prime_of():
-    thenumber=input("Podaj liczbę : ")
-    try: 
-        if thenumber=="exit":
-            print("Baja bongo! PA! :*")
-            exit()
+def get_prime_of(thenumber):
+    try:
         thenumber=int(thenumber)
     except ValueError:
-        print("Podana liczba musi być liczbą cąłkowitą")
+        print("The given number must be an integer")
         thenumber=1
     thenumber=int(thenumber)
     tablica=[]
@@ -18,5 +14,8 @@ def get_prime_of():
         else :liczba+=1
     return tablica
 
-while True:
-    print(get_prime_of())
+x=1
+while x!="exit":
+    x=input("Enter a number : ")
+    print(get_prime_of(x))
+print("Baja bongo! PA! :*")
