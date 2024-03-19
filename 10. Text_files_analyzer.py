@@ -7,7 +7,6 @@ from dataclasses import dataclass
 class Results:
 
     def __post_init__(self):
-        self.show_top=10
         self.total_info={}
         # Dictionary about how many times each result was occured
         self.total_words_nr=0
